@@ -337,28 +337,28 @@ M.nvterm = {
       "toggle horizontal term",
     },
 
-    ["<A-v>"] = {
-      function()
-        require("nvterm.terminal").toggle "vertical"
-      end,
-      "toggle vertical term",
-    },
+    -- ["<A-v>"] = {
+    --   function()
+    --     require("nvterm.terminal").toggle "vertical"
+    --   end,
+    --   "toggle vertical term",
+    -- },
 
     -- new
 
-    ["<leader>h"] = {
-      function()
-        require("nvterm.terminal").new "horizontal"
-      end,
-      "new horizontal term",
-    },
+    -- ["<leader>h"] = {
+    --   function()
+    --     require("nvterm.terminal").new "horizontal"
+    --   end,
+    --   "new horizontal term",
+    -- },
 
-    ["<leader>v"] = {
-      function()
-        require("nvterm.terminal").new "vertical"
-      end,
-      "new vertical term",
-    },
+    -- ["<leader>v"] = {
+    --   function()
+    --     require("nvterm.terminal").new "vertical"
+    --   end,
+    --   "new vertical term",
+    -- },
   },
 }
 
@@ -405,67 +405,67 @@ M.blankline = {
 }
 
 M.gitsigns = {
-  plugin = true,
+  -- plugin = true,
 
-  n = {
-    -- Navigation through hunks
-    ["]c"] = {
-      function()
-        if vim.wo.diff then
-          return "]c"
-        end
-        vim.schedule(function()
-          require("gitsigns").next_hunk()
-        end)
-        return "<Ignore>"
-      end,
-      "Jump to next hunk",
-      opts = { expr = true },
-    },
+  -- n = {
+  --   -- Navigation through hunks
+  --   ["]c"] = {
+  --     function()
+  --       if vim.wo.diff then
+  --         return "]c"
+  --       end
+  --       vim.schedule(function()
+  --         require("gitsigns").next_hunk()
+  --       end)
+  --       return "<Ignore>"
+  --     end,
+  --     "Jump to next hunk",
+  --     opts = { expr = true },
+  --   },
 
-    ["[c"] = {
-      function()
-        if vim.wo.diff then
-          return "[c"
-        end
-        vim.schedule(function()
-          require("gitsigns").prev_hunk()
-        end)
-        return "<Ignore>"
-      end,
-      "Jump to prev hunk",
-      opts = { expr = true },
-    },
+  --   ["[c"] = {
+  --     function()
+  --       if vim.wo.diff then
+  --         return "[c"
+  --       end
+  --       vim.schedule(function()
+  --         require("gitsigns").prev_hunk()
+  --       end)
+  --       return "<Ignore>"
+  --     end,
+  --     "Jump to prev hunk",
+  --     opts = { expr = true },
+  --   },
 
-    -- Actions
-    ["<leader>rh"] = {
-      function()
-        require("gitsigns").reset_hunk()
-      end,
-      "Reset hunk",
-    },
+  --   -- Actions
+  --   ["<leader>rh"] = {
+  --     function()
+  --       require("gitsigns").reset_hunk()
+  --     end,
+  --     "Reset hunk",
+  --   },
 
-    ["<leader>ph"] = {
-      function()
-        require("gitsigns").preview_hunk()
-      end,
-      "Preview hunk",
-    },
+  --   ["<leader>ph"] = {
+  --     function()
+  --       require("gitsigns").preview_hunk()
+  --     end,
+  --     "Preview hunk",
+  --   },
 
-    ["<leader>gb"] = {
-      function()
-        package.loaded.gitsigns.blame_line()
-      end,
-      "Blame line",
-    },
+  --   ["<leader>gb"] = {
+  --     function()
+  --       package.loaded.gitsigns.blame_line()
+  --     end,
+  --     "Blame line",
+  --   },
 
-    ["<leader>td"] = {
-      function()
-        require("gitsigns").toggle_deleted()
-      end,
-      "Toggle deleted",
-    },
-  },
+  --   ["<leader>td"] = {
+  --     function()
+  --       require("gitsigns").toggle_deleted()
+  --     end,
+  --     "Toggle deleted",
+  --   },
+  -- },
 }
 
 return M
