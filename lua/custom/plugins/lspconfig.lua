@@ -11,3 +11,14 @@ for _, lsp in ipairs(servers) do
         capabilities = capabilities
     }
 end
+
+-- angular
+-- local angular_project_library_path = "C:/Users/zeng/AppData/Local/nvim-data/mason/packages/angular-language-server/node_modules/@angular/language-server/bin"
+-- local ngcmd = {"ngserver", "--stdio", "--tsProbeLocations", angular_project_library_path, "--ngProbeLocations",
+--                angular_project_library_path}
+-- lspconfig.angularls.setup {
+--     cmd = ngcmd,
+--     on_new_config = function(new_config, new_root_dir)
+--         new_config.cmd = ngcmd
+--     end,
+-- }

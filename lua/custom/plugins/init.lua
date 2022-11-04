@@ -3,7 +3,7 @@ return {
         override_options = {
             ensure_installed = { --
             "lua-language-server", "stylua", -- lua
-            "css-lsp", "html-lsp", "typescript-language-server", "deno", "emmet-ls", "json-lsp", -- web
+            "css-lsp", "html-lsp", "typescript-language-server", "deno", "emmet-ls", "json-lsp","angular-language-server", -- web
             "shfmt", "shellcheck" -- shell
             }
         },
