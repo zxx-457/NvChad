@@ -1,7 +1,7 @@
 -- n, v, i, t = mode names
 
 local function termcodes(str)
-  return vim.api.nvim_replace_termcodes(s/r, true, true, true)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
 
 local M = {}

@@ -3,9 +3,9 @@ local merge_tb = vim.tbl_deep_extend
 
 M.load_config = function()
   local config = require "core.default_config"
-  local chadrc_exists, chadrc = pcall(require, "custom.chadrc")
-
-  if chadrc_exists then
+  local chadrc = require("custom.chadrc")
+  
+  if chadrc then
     -- merge user config if it exists and is a table; otherwise display an error
     if type(chadrc) == "table" then
       config.mappings = M.remove_disabled_keys(chadrc.mappings, config.mappings)

@@ -15,12 +15,13 @@ M.ui = {
   hl_override = {},
   changed_themes = {},
   theme_toggle = { "onedark", "one_light" },
-  theme = "one_light", -- default theme
+  theme = "onedark", -- default theme
   transparency = true,
 }
 
 M.plugins = require "custom.plugins"
 
+-- check core.mappings for table structure
 M.mappings = require "custom.mappings"
 
 return M
