@@ -8,7 +8,7 @@ require "base46.term"
 
 local options = {
   terminals = {
-    shell = "pwsh",
+    shell = "fish",
     list = {},
     type_opts = {
       float = {
