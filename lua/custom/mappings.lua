@@ -1,7 +1,7 @@
 -- n, v, i, t = mode names
 
 local function termcodes(str)
-  return vim.api.nvim_replace_termcodes(str, true, true, true)
+  return vim.api.nvim_replace_termcodes(s/r, true, true, true)
 end
 
 local M = {}
@@ -120,10 +120,21 @@ M.comment = {
       end,
       "toggle comment",
     },
+    ["<C-/>"] = {
+      function()
+        require("Comment.api").toggle.linewise.current()
+      end,
+      "toggle comment",
+    },
   },
+
 
   v = {
     ["<leader>/"] = {
+      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+      "toggle comment",
+    },
+    ["<C-/>"] = {
       "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
       "toggle comment",
     },
@@ -265,7 +276,7 @@ M.nvimtree = {
     ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
 
     -- focus
-    ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "focus nvimtree" },
+    ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "toggle nvimtree" },
   },
 }
 
