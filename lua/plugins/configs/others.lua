@@ -13,7 +13,8 @@ M.autopairs = function()
 
   local options = {
     fast_wrap = {},
-    disable_filetype = { "TelescopePrompt", "vim" },
+    enable_check_bracket_line = false,
+    disable_filetype = { "TelescopePrompt", "vim"},
   }
 
   options = load_override(options, "windwp/nvim-autopairs")
