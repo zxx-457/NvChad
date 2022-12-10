@@ -304,6 +304,9 @@ M.telescope = {
 
     -- theme switcher
     ["<leader>th"] = { "<cmd> Telescope themes <CR>", "nvchad themes" },
+
+    -- projects
+    ["<leader>fp"] = { "<cmd> Telescope projects <CR>", "pick projects"},
   },
 }
 

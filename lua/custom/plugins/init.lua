@@ -40,20 +40,21 @@ return {
   },
   ["Olical/conjure"] = {
     setup = function()
-      require("custom.plugins.conjure")
+      require "custom.plugins.conjure"
     end,
   },
-  ['radenling/vim-dispatch-neovim'] = {
-
-  },
-  ['tpope/vim-dispatch'] = {
+  ["radenling/vim-dispatch-neovim"] = {},
+  ["tpope/vim-dispatch"] = {
     setup = function()
-      require("custom.plugins.dispatch")
-    end
+      require "custom.plugins.dispatch"
+    end,
   },
-  ['dag/vim-fish'] = {
-    setup = function()
-    end
-  }
-
+  ["dag/vim-fish"] = {
+    setup = function() end,
+  },
+  ["ahmedkhalf/project.nvim"] = {
+    config = function()
+      require("custom.plugins.project")
+    end,
+  },
 }
