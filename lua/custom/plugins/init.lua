@@ -32,12 +32,12 @@ return {
       require "custom.plugins.surround"
     end,
   },
-  ["jose-elias-alvarez/null-ls.nvim"] = {
-    after = "nvim-lspconfig",
-    config = function()
-      require "custom.plugins.null-ls"
-    end,
-  },
+  -- ["jose-elias-alvarez/null-ls.nvim"] = {
+  --   after = "nvim-lspconfig",
+  --   config = function()
+  --     require "custom.plugins.null-ls"
+  --   end,
+  -- },
   ["Olical/conjure"] = {
     setup = function()
       require "custom.plugins.conjure"
@@ -50,6 +50,9 @@ return {
     end,
   },
   ["dag/vim-fish"] = {
+    setup = function() end,
+  },
+  ['waycrate/swhkd-vim'] = {
     setup = function() end,
   },
   ["ahmedkhalf/project.nvim"] = {
