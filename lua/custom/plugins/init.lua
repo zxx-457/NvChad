@@ -55,6 +55,9 @@ return {
   ['waycrate/swhkd-vim'] = {
     setup = function() end,
   },
+  ['NoahTheDuke/vim-just'] = {
+    setup = function() end,
+  },
   ["ahmedkhalf/project.nvim"] = {
     config = function()
       require("custom.plugins.project")
