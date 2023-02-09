@@ -15,8 +15,8 @@ M.ui = {
   hl_override = {},
   changed_themes = {},
   theme_toggle = { "onedark", "one_light" },
-  theme = "one_light", -- default theme
-  transparency = false,
+  theme = "onedark", -- default theme
+  transparency = true,
 }
 
 M.plugins = require "custom.plugins"
